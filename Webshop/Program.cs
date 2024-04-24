@@ -1,4 +1,9 @@
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
+using MvcWebshop.Data;
 var builder = WebApplication.CreateBuilder(args);
+builder.Services.AddDbContext<MvcWebshopContext>(options =>
+    options.UseSqlite(builder.Configuration.GetConnectionString("MvcWebshopContext") ?? throw new InvalidOperationException("Connection string 'MvcWebshopContext' not found.")));
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
