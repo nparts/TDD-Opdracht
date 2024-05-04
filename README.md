@@ -1,5 +1,49 @@
 # TDD-Opdracht
 
+## Stap 1: Installatie van Visual Studio
+
+1.Download en installeer Visual Studio (indien nog niet geïnstalleerd). Zorg ervoor dat je tijdens de installatie de 'ASP.NET en webontwikkeling' workload selecteert, omdat deze de benodigde tools en templates voor ASP.NET MVC projecten bevat.
+
+## Stap 2: Een Nieuw ASP.NET MVC Project Aanmaken
+
+1. Start Visual Studio.
+1. Kies 'Create a new project'.
+1. Zoek naar 'ASP.NET Core Web App (Model-View-Controller)' in de project template zoekbalk en selecteer het. Klik op 'Next'.
+1. Geef het project een naam en locatie, bijvoorbeeld WebApplication1, en klik op 'Next'.
+1. Selecteer het framework – zorg ervoor dat je .NET Core en ASP.NET Core 8.0 kiest.
+1. Klik op 'Create' om het project te genereren. Visual Studio zal nu een nieuw ASP.NET MVC project opzetten met een standaardstructuur inclusief Models, Views en Controllers mappen.
+
+## Stap 3: Een Nieuw Testing Project Aanmaken
+
+1. Open Solution Explorer in Visual Studio.
+1. Klik met de rechtermuisknop op de Solution (niet het project) en kies 'Add' → 'New Project…'.
+1. Zoek naar 'xUnit Test Project' (je kunt ook NUnit of MSTest kiezen, afhankelijk van je voorkeur) in de project template zoekbalk en selecteer het. Klik op 'Next'.
+1. Geef het testproject een naam, bijvoorbeeld WebApplication1.Tests, en zorg dat het zich in dezelfde solution als je MVC project bevindt. Klik op 'Next'.
+1. Selecteer hetzelfde framework als je MVC project, meestal .NET Core en dezelfde versie als het MVC project.
+1. Klik op 'Create'. Visual Studio zal nu een testproject in dezelfde solution als je MVC project creëren.
+
+## Stap 4: Verwijs naar Je MVC Project vanuit Je Test Project
+
+1.Klik in Solution Explorer met de rechtermuisknop op de 'Dependencies' van je testproject.
+1. Kies 'Add Project Reference…'.
+1. Selecteer je MVC project in de lijst en klik op 'OK'. Dit zorgt ervoor dat je testproject toegang heeft tot de klassen in je MVC project.
+
+## Stap 5: Schrijf je eerste test
+
+1. Voeg een testklasse toe aan je testproject, bijvoorbeeld HomeControllerTests.
+1. Voeg een testmethode toe zoals IndexViewReturnsSuccess() die test of de Index view succesvol rendert.
+1. Gebruik Assertions om te controleren of de resultaten zoals verwacht zijn.
+
+## Stap 6: Uitvoeren van de Tests
+
+1. Open de Test Explorer in Visual Studio via 'Test' → 'Test Explorer'.
+1. Run je tests om te zien of ze slagen. Visual Studio toont de resultaten in de Test Explorer.
+
+
+## Stap 7: Unit test schrijven voor de volgende user story
+
+Op basis van de besproken user storie in de les kunnen de volgende test cases bepaald worden. gebruik deze om je unit test in je test project te schrijven.
+
 | Onderdeel                              | Details                                                                                                                                                                                                                                                                                                                        |
 |----------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **User Story Titel**                   | Winkelwagentje Functionaliteit toevoegen                                                                                                                                                                                                                                                                                       |
