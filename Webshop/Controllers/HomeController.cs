@@ -1,20 +1,31 @@
-using System;
+using System.Diagnostics;
+using Microsoft.AspNetCore.Mvc;
+using Webshop.Models;
 
-public class Prorgam
+namespace Webshop.Controllers;
+
+public class HomeController : Controller
 {
-    public static void Main(string[] args)
+    private readonly ILogger<HomeController> _logger;
+
+    public HomeController(ILogger<HomeController> logger)
     {
-        justAFunction(true, true, true);
+        _logger = logger;
     }
-    private static void justAFunction(bool a, bool b, bool c)
+
+    public IActionResult Index()
     {
-        if (a & b & c)
-        {
-            Console.WriteLine("Hello, World!");
-        }
-        else
-        {
-            Console.WriteLine("Goodbye, World!");
-        }
+        return View();
+    }
+
+    public IActionResult Privacy()
+    {
+        return View();
+    }
+
+    [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
+    public IActionResult Error()
+    {
+        return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
     }
 }
