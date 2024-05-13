@@ -8,6 +8,10 @@ namespace MvcWebshop.Data
 {
     public class MvcWebshopContext : DbContext
     {
+        public MvcWebshopContext()
+        {
+        }
+
         public MvcWebshopContext (DbContextOptions<MvcWebshopContext> options)
             : base(options)
         {
